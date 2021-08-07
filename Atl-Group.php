@@ -133,7 +133,7 @@ class AtlGroup
         $_TYPE = strtoupper($_TYPE);
         switch ($_TYPE) {
             case 'info':
-                $_BANK      = strtoupper($_DATA[0]);
+                $_BANK      = strtoupper($_DATA);
                 $_PARAM     = NULL;
                 if (in_array($_BANK, ['BCA', 'BNI', 'GOPAY', 'OVO'])) $_PARAM = ['payment' => $_BANK];
                 break;
