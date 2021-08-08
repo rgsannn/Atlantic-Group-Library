@@ -199,7 +199,8 @@ class AtlGroup
         curl_setopt($ch, CURLOPT_URL, $this->base . $_ENDPOINT);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        $chresult = curl_exec($ch);
         curl_close($ch);
-        return json_decode(curl_exec($ch), true);
+        return json_decode($chresult, true);
     }
 }
