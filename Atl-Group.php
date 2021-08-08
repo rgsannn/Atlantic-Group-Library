@@ -141,19 +141,19 @@ class AtlGroup
             case 'bca':
             case 'bni':
                 $_PARAM = [
-                    'from_date' => isset($_DATA[0]) ? $_DATA[0] : NULL,
-                    'to_date' => isset($_DATA[1]) ? $_DATA[1] : NULL,
-                    'quantity' => isset($_DATA[2]) ? $_DATA[2] : NULL,
-                    'description' => isset($_DATA[3]) ? $_DATA[3] : NULL
+                    'from_date' => $this->setNull($_DATA[0]),
+                    'to_date' => $this->setNull($_DATA[1]),
+                    'quantity' => $this->setNull($_DATA[2]),
+                    'description' => $this->setNull($_DATA[3])
                 ];
                 break;
 
             case 'gopay':
             case 'ovo':
                 $_PARAM = [
-                    'limit' => isset($_DATA[0]) ? $_DATA[0] : NULL,
-                    'quantity' => isset($_DATA[1]) ? $_DATA[1] : NULL,
-                    'description' => isset($_DATA[2]) ? $_DATA[2] : NULL
+                    'limit' => $this->setNull($_DATA[0]),
+                    'quantity' => $this->setNull($_DATA[1]),
+                    'description' => $this->setNull($_DATA[2])
                 ];
                 break;
 
@@ -202,5 +202,10 @@ class AtlGroup
         $chresult = curl_exec($ch);
         curl_close($ch);
         return json_decode($chresult, true);
+    }
+
+    private function setNull($_DATA)
+    {
+        return isset($_DATA) ? $_DATA : NULL;
     }
 }
