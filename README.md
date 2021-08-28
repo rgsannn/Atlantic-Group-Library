@@ -7,7 +7,7 @@ Full Documentation, Please Visit :
 - WhatsApp        : https://atlantic-group.co.id/api/v1/docs/whatsapp
 - Mutation        : https://atlantic-group.co.id/api/v1/docs/mutation
 
-### Intalasi
+### Instalasi
 Untuk Dapat Menggunakan Fungsi Ini, Pertama-tama Upload Script Atl-Group.php Ke Web Anda Dan Buat Api Key Di [Atlantic Group](https://atlantic-group.co.id/) Lalu Copy Api Id, Api Key Dan Subscription Id Jika Berlangganan Mutasi Atau Whatsapp. Lalu Buat Kodingan Berikut Di File Anda Lalu Pastekan Data Api Id, Api Key Dan Subscription Id Pada Kodingan Berikut :
 ```
 require 'Atl-Group.php'; // Arahkan Ke File Atl-Group.php Sesuai Anda Menyimpannya
